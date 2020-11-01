@@ -12,7 +12,7 @@ pipeline {
     stage('Smoke Test') {
       steps {
         echo 'Smoke test is going to start'
-        git(url: 'https://github.com/LeafPages/EyeAutomation', branch: 'master', poll: true)
+        git(url: 'https://github.com/manvr/EyeAutomation', branch: 'master', poll: true)
         bat(script: 'mvn test -DEnvironment=Dev', label: 'Dev Smoke')
       }
     }
