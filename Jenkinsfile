@@ -4,7 +4,7 @@ pipeline {
     stage('Dev Build') {
       steps {
         echo 'Dev Build to Start'
-        git(url: 'https://github.com/manvr/EyeManage', branch: 'master', poll: true)
+        git(url: 'https://github.com/manvr/EyeAutomation', branch: 'master', poll: true)
         bat(script: 'mvn install', label: 'Dev')
       }
     }
